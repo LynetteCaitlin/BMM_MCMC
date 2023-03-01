@@ -6,11 +6,11 @@ Assuming equilibrium, mutation and selection parameters are estimated.
 The site frequencies are assumed to evolve according to the boundary-mutation Moran model:
 This is an approximation to the bi-allic Moran model with reversible mutations for small scaled overall mutation rates.
 
-Specifically, the methods are based on the approximate equilibrium transition rates in:
+Specifically, the methods are based on the approximate equilibrium transition rates in
 
 Equations 27-32 of C.Vogl and L.C.Mikula, Theoretical Population Biology 139 (2021), p.1-17
 
-<https://www.sciencedirect.com/science/article/pii/S0040580921000289>
+see: <https://www.sciencedirect.com/science/article/pii/S0040580921000289>
 
 
 Please follow the examples provided in 
