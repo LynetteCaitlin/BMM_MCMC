@@ -60,7 +60,7 @@ vartheta <- 0.000255  # = (beta*(1-beta)*theta) / ((1-beta)+beta*exp(gamma))
 M <- 24               # sample size
 
 # simulate an equilibrium spectrum
-simVec <- equilDistr_dir(gamma,rho,vartheta,24)
+simVec <- equilDistr_dir(gamma,rho,vartheta,M)
 # infer parameters
 getParms(simVec)
 
