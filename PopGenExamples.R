@@ -5,8 +5,6 @@
 # OUTPUT: estimators for mutation rate, mutation bias, directional and quadratic selection, and split time between the populations 
 
 
-source('~/Documents/Documents - Lynette’s MacBook Pro/Research/Active/MalariaProj/SecondCodeSet/PopGenJSFS_MCMC_FunctionFile.R', chdir = TRUE)
-
 # load the source file:
 #      source('(INSERT FILE LOCATION)/PopGenJSFS_MCMC_FunctionFile.R', chdir = TRUE)
 #############################
@@ -88,7 +86,7 @@ plot(colSums(bigSim)[2:21],pch="+")
 lines(colSums(compSim1)[2:21],pch="x",col="grey")
 
 
-Infer_bigSim <- MetrHast(beta=0.1,theta=0.002,B1=0.9,tau=0.3,jSFS=bigSim,fix.B1=FALSE,fix.B2=FALSE,verbose=FALSE,maxIT=400000)
+Infer_bigSim <- MetrHast(beta=0.1,theta=0.002,B1=0.9,tau=0.3,jSFS=bigSim,fix.B1=FALSE,fix.B2=FALSE,verbose=FALSE)
 Infer_bigSim$estimates
 
 
