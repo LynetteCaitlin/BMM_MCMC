@@ -28,7 +28,7 @@ The source file for this is:
 
 Details about the algorithm can be found in the article (...tba when available...)
 
-## B. Simple Method of Moment Estimators
+## B. Simple Maximum Likelihood Estimators
 
 Basic code for inferring the overall scaled mutation rate, the mutation bias, and the strength of directional selection (or biased gene conversion) from the joint site frequency spectrum of an individual population.
 
