@@ -14,7 +14,7 @@ see: <https://www.sciencedirect.com/science/article/pii/S0040580921000289>
 
 
 Please follow the examples provided in 
-<https://LynetteCaitlin.github.io/BMM_MCMC/blob/main/PopGenExamples.R>
+<https://github.com/LynetteCaitlin/BMM_MCMC/blob/main/PopGenExamples.R>
 and read the comments for a full understanding of how to apply the methods.
 
 The examples pertain to two inference techniques:
@@ -24,7 +24,7 @@ The examples pertain to two inference techniques:
 This is a Metropolis-Hastings algorithm for inferring the overall scaled mutation rate, the mutation bias, and the strength of directional selection (or biased gene conversion), and the strength of quadratic selection from the joint site frequency spectrum of two populations, as well as the population split time. 
 
 The source file for this is:
-<https://LynetteCaitlin.github.io/BMM_MCMC/blob/main/PopGenJSFS_MCMC_FunctionFile.R>
+<https://github.com/LynetteCaitlin/BMM_MCMC/blob/main/PopGenJSFS_MCMC_FunctionFile.R>
 
 Details about the algorithm can be found in the article (...tba when available...)
 
@@ -33,7 +33,7 @@ Details about the algorithm can be found in the article (...tba when available..
 Basic code for inferring the overall scaled mutation rate, the mutation bias, and the strength of directional selection (or biased gene conversion) from the joint site frequency spectrum of an individual population.
 
 The source file for this is:
-<https://LynetteCaitlin.github.io/BMM_MCMC/blob/main/PopGenSFS_FunctionFile.R>
+<https://github.com/LynetteCaitlin/BMM_MCMC/blob/main/PopGenSFS_FunctionFile.R>
 
 
 
