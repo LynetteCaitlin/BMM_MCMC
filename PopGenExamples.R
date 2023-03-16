@@ -13,7 +13,7 @@ J <- 22           # haploid population size of population 1; single (marginal) s
 L <- 36           # haploid population size of population 2; single (marginal) spectrum is a row vector
 theta <- 0.002    # overall scaled mutation rate (scaled by haploid population size)
 beta <- 0.33      # mutation bias
-B1 <- 1.11        # directional component: directional selection, or biased gene conversion,...
+B1 <- 1.11        # linear component: directional selection, or biased gene conversion,...
 B2 <- 0           # quadratic component: quadratic selection,...
 tau <- 0.8        # split time, on the diffusion time scale 
 size <- 40000000  # number of sites in the spectrum; NOTE THAT THIS MAY HAVE TO BE QUITE LARGE TO ENSURE INFERENCE ACCURACY
@@ -28,8 +28,8 @@ simDown <- downSampleM(simMat,23)
 #   N - dimension of the square joint spectrum that is the basis of the calculations; when = NULL N=max(J,L)+1 
 #   beta - initial value for mutation bias
 #   theta - initial value for overall mutation rate
-#   B1 - initial value for directional component, default is 0
-#   B2 -  initial value for directional component, default is 0
+#   B1 - initial value for linear component, default is 0
+#   B2 -  initial value for quadratic component, default is 0
 #   tau - initial value for split time
 #   jSFS - observed spectrum
 #   maxIT - number of iterations, default is 20000
