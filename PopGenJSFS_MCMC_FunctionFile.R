@@ -235,7 +235,7 @@ MetrHast <- function(N=NULL,beta,theta,B1=0,B2=0,tau,jSFS,maxIT= 20000,burnin=NU
     }
     # store the results for each iteration
     matResults[it,]=c(LogLike,beta,theta,B1,B2,t/(N^2))
-    colnames(matResults) <- c("log-likelihood","mutation bias","mutation rate","directional selection","quadratic selection","split time")
+    colnames(matResults) <- c("log-likelihood","mutation bias","mutation rate","B1","B2","split time")
     
     if(verbose){
       if(it%%100==0){
@@ -247,7 +247,7 @@ MetrHast <- function(N=NULL,beta,theta,B1=0,B2=0,tau,jSFS,maxIT= 20000,burnin=NU
   
   #estimates
   est <- c(mean(matResults[((burnin+1):maxIT),1]),mean(matResults[((burnin+1):maxIT),2]),mean(matResults[((burnin+1):maxIT),3]), mean(matResults[((burnin+1):maxIT),4]),mean(matResults[((burnin+1):maxIT),5]),mean(matResults[((burnin+1):maxIT),6]))
-  names(est) <- c("log-likelihood","mutation bias","mutation rate","directional selection","quadratic selection","split time")
+  names(est) <- c("log-likelihood","mutation bias","mutation rate","B1","B2","split time")
   # store output
   res <- list(samples=matResults,
               estimates=est)
@@ -264,16 +264,16 @@ MetrHast <- function(N=NULL,beta,theta,B1=0,B2=0,tau,jSFS,maxIT= 20000,burnin=NU
   
   # below, we plot the traces of all estimated parameters to assess convergence
   #     - burnin is excluded
-  #     - means (after burnin) are added in horizontal white  ines
+  #     - means (after burnin) are added in horizontal white lines
   
   if(!fix.B2){
-  B2info <- res2[res2$Parameter=="quadratic selection",]
+  B2info <- res2[res2$Parameter=="B2",]
   B2trace <- ggmcmc::ggs_traceplot(B2info)+geom_hline(yintercept=mean(as.numeric(unlist(B2info[3]))),colour="white")
   grid.arrange(B2trace,nrow=1)
   }
   
   if(!fix.B1){
-    B1info <- res2[res2$Parameter=="directional selection",]
+    B1info <- res2[res2$Parameter=="B1",]
     B1trace <- ggmcmc::ggs_traceplot(B1info)+geom_hline(yintercept=mean(as.numeric(unlist(B1info[3]))),colour="white")
     grid.arrange(B1trace,nrow=1)
   }
