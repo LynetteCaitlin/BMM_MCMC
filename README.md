@@ -4,7 +4,7 @@ These methods use bi-allelic sample site frequency spectra from two populations 
 Assuming equilibrium, mutation and selection parameters are estimated. 
 
 The site frequencies are assumed to evolve according to the boundary-mutation Moran model:
-This is an approximation to the bi-allic Moran model with reversible mutations for small scaled overall mutation rates.
+This is an approximation to the biallelic Moran model with reversible mutations for small scaled overall mutation rates.
 
 Specifically, the methods are based on the approximate equilibrium transition rates in
 
